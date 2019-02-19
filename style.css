@@ -1,11 +1,14 @@
 .game{
     display: grid;
     grid-template-columns: auto auto auto; 
+    grid-auto-rows: 500px;
+    row-gap: 200px;
 }
 
 h1{
     text-align: center;
     font-size: 100px;
+    
 }
 
 button{
@@ -15,5 +18,39 @@ button{
     height: 100;
     width: 300;
     font-size: 100px;
+}
+
+#points
+{
+	position: absolute;
+	right: 900px;
+	top: 70px;
+	border: solid 2px black;
+	padding: 3px 10px 3px 10px;
+	width: 100px;
+	font-size: 80px;
+	border-radius: 5px;
+}
+
+.field
+{
+	position:relative;
+	margin: 0.5%;
+	float: top;
+	overflow:hidden;
+    min-height: 500px;
+    top: 20px;
+	
+}
+
+
+
+
+.mrbump
+{
+	display:block;
+	position: absolute;
+	bottom: 0;
+	width:100%;
 }
 
