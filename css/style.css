@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: url("../img/pondframe.png") no-repeat center center;
+  background-position: 50% 10%;
+  background-size: cover;
+}
+
+main {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  color: green;
+}
+
+#score-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 1.5rem;
+  border: 1px #2fcb53;
+  margin: 0.1rem;
+  padding: 0.1rem;
+}
+
+button {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.7em 1.2em;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  min-width: 3rem;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid;
+  color: #fff;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+}
+
+.primary {
+  background-color: #2fcb53;
+  border-color: #2fcb53;
+  color: #fff;
+  padding: 0.2rem;
+  margin: 0.1rem;
+}
+
+.primary:hover {
+  background-color: #48dd84;
+  border-color: #48dd84;
+}
+#play-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ground {
+  display: inline-flex;
+  flex: 1 1 25%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: url("../img/pond.jpeg") no-repeat;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+.dirt,
+.mole {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dirt {
+  background-image: url("../img/field.png");
+  z-index: 1;
+  background-position: center 113%;
+}
+
+.mole {
+  background-image: url("../img/frog.png");
+  transition: all 0.1s ease;
+  top: 100%;
+  background-position: bottom;
+  background-size: 70%;
+}
+
+.ground.active .mole {
+  top: 0;
+}
+
+.text {
+  width: 100%;
+  padding-top: 3rem;
+  color: green;
+  text-align: center;
+}
+
+@media all and (max-width: 580px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .ground {
+    padding: 0;
+  }
+
+  .wrapper {
+    padding-bottom: 130%;
+  }
+  #score {
+    padding-left: 2px;
+    font-size: 1rem;
+    text-align: center;
+    border-color: #2fcb53;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px;
+  }
+}
+
+/* Smartphone o piccoli Tablet */
+@media all and (max-width: 375px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .ground {
+    padding: 0;
+  }
+
+  .wrapper {
+    padding-bottom: 130%;
+  }
+  button {
+    font-size: 0.6rem;
+  }
+
+  #score {
+    padding-left: 2px;
+    font-size: 0.8rem;
+    text-align: center;
+    border-color: #2fcb53;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px;
+  }
+}
